@@ -7,6 +7,7 @@
 //                 James Lismore <https://github.com/jlismore>
 //                 Stack Builders <https://github.com/stackbuilders>
 //                 Esteban Ibarra <https://github.com/ibarrae>
+//                 Dominic Lee <https://github.com/dominictwlee>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.8
 
@@ -905,10 +906,14 @@ declare module "victory" {
   /**
    * Category prop type
    */
-  type CategoryPropType = string[] | {
-    x: string[]
-    y: string[]
-  };
+  type CategoryPropType =
+    | string[]
+    | { x: string[] }
+    | { y: string[] }
+    | {
+        x: string[];
+        y: string[];
+      };
 
   /**
    * Data getter property type
@@ -1008,6 +1013,16 @@ declare module "victory" {
      * @default <g/>
      */
     groupComponent?: React.ReactElement;
+    /**
+     * The categories prop specifies how categorical data for a chart should be ordered.
+     * This prop should be given as an array of string values, or an object with
+     * these arrays of values specified for x and y. If this prop is not set,
+     * categorical data will be plotted in the order it was given in the data array.
+     *
+     * note: The x value supplied to the categories prop refers to the independent variable, and the y value refers to the dependent variable. This may cause confusion in horizontal charts, as the independent variable will corresponds to the y axis.
+     * @example ["dogs", "cats", "mice"]
+     */
+    categories?: CategoryPropType;
   }
 
   /**

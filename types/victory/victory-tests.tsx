@@ -478,6 +478,20 @@ test = (
   </VictoryChart>
 );
 
+test = (
+  <VictoryChart
+    categories={{ x: ['A', 'B', 'C'] }}
+  >
+    <VictoryBar
+      data={[
+        { y: 5, x: 'A' },
+        { y:  6, x: 'B' },
+        { y: 7, x: 'C' },
+      ]}
+    />
+  </VictoryChart>
+);
+
 // VictoryGroup test
 test = (
   <VictoryGroup offset={40}>
