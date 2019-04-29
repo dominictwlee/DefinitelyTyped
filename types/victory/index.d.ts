@@ -1019,8 +1019,8 @@ declare module "victory" {
      * these arrays of values specified for x and y. If this prop is not set,
      * categorical data will be plotted in the order it was given in the data array.
      *
-     * note: The x value supplied to the categories prop refers to the independent variable, 
-     * and the y value refers to the dependent variable. This may cause confusion in horizontal charts, 
+     * note: The x value supplied to the categories prop refers to the independent variable,
+     * and the y value refers to the dependent variable. This may cause confusion in horizontal charts,
      * as the independent variable will corresponds to the y axis.
      * @example ["dogs", "cats", "mice"]
      */
